@@ -2,7 +2,7 @@ package com.fastcampus.ch2;
 
 import java.lang.reflect.Method;
 
-public class Main {
+public class PrivateMethodCall {
 	public static void main(String[] args) throws Exception {
 		// 메서드를 private으로 설정하면 다른 클래스에서 메서드 호출이 불가능
 		// Hello hello = new Hello();
