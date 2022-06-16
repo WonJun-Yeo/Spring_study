@@ -17,7 +17,7 @@ public class SetterCall {
 		
 		Class<?> type = Class.forName("com.fastcampus.ch2.MyDate");
 
-		// MyDate인스턴스를 생성하고, map의 값으로 초기화한다. 
+		// MyDate 객체(인스턴스)를 생성하고, map의 값으로 초기화한다. 
 		Object obj = dataBind(map, type);
 		System.out.println("obj="+obj); // obj=[year=2021, month=10, day=1]
 	} // main

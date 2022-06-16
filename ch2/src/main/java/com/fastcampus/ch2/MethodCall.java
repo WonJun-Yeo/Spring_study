@@ -14,7 +14,7 @@ public class MethodCall {
 		ModelController mc = new ModelController();
 		String viewName = mc.main(map);
 		
-		System.out.println("after :"+map);
+		System.out.println("after :" + map);
 		
 		render(map, viewName);
 	}

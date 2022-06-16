@@ -10,9 +10,11 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+// 프로그램 등록
 @Controller
 public class YoilTeller {
 	// public static void main(String[] args) {
+	// URL 연결
 	@RequestMapping("/getYoil") // http://localhost:8080/ch2/getYoil?year=2021&month=10&day=1
 	public void main(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		// 1. 입력

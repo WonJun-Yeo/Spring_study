@@ -33,14 +33,6 @@ public class YoilTellerMVC4 {
         return "yoil"; // /WEB-INF/views/yoil.jsp
     }
     
-    private boolean isValid(MyDate date) {
-		return isValid(date.getYear(), date.getMonth(), date.getDay());
-	}
-
-	private char getYoil(MyDate date) {
-		return getYoil(date.getYear(), date.getMonth(), date.getDay());
-	}
-
 	private char getYoil(int year, int month, int day) {
         Calendar cal = Calendar.getInstance();
         cal.set(year, month - 1, day);
@@ -49,10 +41,20 @@ public class YoilTellerMVC4 {
         return " 일월화수목금토".charAt(dayOfWeek);
     }
     
+	// 오버로딩
+	private char getYoil(MyDate date) {
+		return getYoil(date.getYear(), date.getMonth(), date.getDay());
+	}
+	
     private boolean isValid(int year, int month, int day) {    
     	if(year==-1 || month==-1 || day==-1) 
     		return false;
     	
     	return (1<=month && month<=12) && (1<=day && day<=31); // 간단히 체크 
     }
+    
+    // 오버로딩
+    private boolean isValid(MyDate date) {
+		return isValid(date.getYear(), date.getMonth(), date.getDay());
+	}
 }

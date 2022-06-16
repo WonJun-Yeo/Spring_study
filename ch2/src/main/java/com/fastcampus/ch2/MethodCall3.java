@@ -28,7 +28,7 @@ public class MethodCall3 {
 		// YoilTellerMVC.main(int year, int month, int day, Model model)
 		Method main = clazz.getDeclaredMethod("main", int.class, int.class, int.class, Model.class);
 				
-		Parameter[] paramArr = main.getParameters();	// main메서드의 매개변수 목록을 가져온다.
+		Parameter[] paramArr = main.getParameters();			// main메서드의 매개변수 목록을 가져온다.
 		Object[] argArr = new Object[main.getParameterCount()];	// 매개변수 갯수와 같은 길이의 Object 배열 생성
 		
 		for(int i=0;i<paramArr.length;i++) {

@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+// 프로그램등록
 @Controller
 public class YoilTellerMVC {
 	@ExceptionHandler(Exception.class)
@@ -33,7 +34,7 @@ public class YoilTellerMVC {
         model.addAttribute("yoil", yoil);
         
         // 4. 작업 결과를 보여줄 View의 이름을 반환
-        return "yoil"; // /WEB-INF/views/yoil.jsp
+        return "yoil"; // /WEB-INF/views/yoil.jsp 을 이용해서 결과를 보여줘라 라는 뜻
     }
     
     private char getYoil(int year, int month, int day) {

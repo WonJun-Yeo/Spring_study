@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/hello")
 public class HelloSurvlet extends HttpServlet {
+	// 아래 메서드들은 Servlet Container가 자동으로 호출한다.
 
 	@Override
 	public void init() throws ServletException {
@@ -31,6 +32,5 @@ public class HelloSurvlet extends HttpServlet {
 		// 서블릿이 메모리에서 리로딩되거나 웹애플리케이션이 종료될 때, 뒷마무리를 하기위해 서블릿 컨테이너에 의해 자동 호출된다.
 		System.out.println("HelloServlet destroy() is called");
 	}
-
 	
 }

@@ -17,7 +17,7 @@ public class YoilTellerMVC5 {
 	}
 	
     @RequestMapping("/getYoilMVC5") // http://localhost/ch2/getYoilMVC
-    //public String main(@ModelAttribute("myDate") MyDate date, Model model) { // 아래와 동일
+    //public String main(@ModelAttribute("myDate") MyDate date, Model model) { // 아래와 동일, 타입의 소문자로 시작하는 것을 key로 사용
     public String main(@ModelAttribute MyDate date, Model model) {
  
         // 1. 유효성 검사
@@ -38,7 +38,8 @@ public class YoilTellerMVC5 {
     private boolean isValid(MyDate date) {
 		return isValid(date.getYear(), date.getMonth(), date.getDay());
 	}
-
+    
+    // 리턴값을 모델에 저장
 	private @ModelAttribute("yoil") char getYoil(MyDate date) {
 		return getYoil(date.getYear(), date.getMonth(), date.getDay());
 	}
