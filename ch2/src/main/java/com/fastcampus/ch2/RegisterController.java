@@ -6,16 +6,17 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 //프로그램 등록
 @Controller
 public class RegisterController {
 	// URL 연결
-	// @RequestMapping(value="/register/add", method=RequestMethod.POST)
-//	@GetMapping("/register/add")
-//	public String register() {
-//		return "registerForm";		// WEB-INF/views/regusterForm.jsp
-//	}
+	 @RequestMapping(value="/register/add", method= {RequestMethod.POST, RequestMethod.POST})
+	public String register() {
+		return "registerForm";		// WEB-INF/views/regusterForm.jsp
+	}
 	
 	// URL 연결
 	// @RequestMapping(value="/register/save", method=RequestMethod.POST)
@@ -26,7 +27,7 @@ public class RegisterController {
 			String msg = URLEncoder.encode("id를 잘못입력하셨습니다.", "utf-8");
 			
 			m.addAttribute("msg", msg);
-			return "redirect:/register/add";
+			return "forward:/register/add";
 			//return "redirect:/register/add?msg=" + msg;			// URL 재작성 : rewriting
 		}
 		
@@ -35,6 +36,6 @@ public class RegisterController {
 	}
 
 	private boolean isValid(User user) {
-		return true;
+		return false;
 	}
 }
