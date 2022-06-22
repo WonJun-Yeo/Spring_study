@@ -94,7 +94,7 @@ public class DBConnectionTest2Test extends TestCase {
             return user;
         }
 
-        return null;e
+        return null;
     }
 
     private void deleteAll() throws Exception {
