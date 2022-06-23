@@ -19,11 +19,10 @@ import java.util.Date;
 public class DBConnectionTest2Test extends TestCase {
     @Autowired
     DataSource ds;
-    
+
     @Test
     @RunWith(SpringJUnit4ClassRunner.class)
     @ContextConfiguration(locations = {"file:src/main/webapp/WEB-INF/spring/**/root-context.xml"})
-
     public void insertUserTest() throws Exception {
         User user = new User("asdf", "1234", "abc",  "aaa@aaa.com", new Date(), "fb", new Date());
         deleteAll();
