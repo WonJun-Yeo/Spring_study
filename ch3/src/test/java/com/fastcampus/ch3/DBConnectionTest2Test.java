@@ -13,15 +13,17 @@ import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Date;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = {"file:src/main/webapp/WEB-INF/spring/**/root-context.xml"})
 public class DBConnectionTest2Test extends TestCase {
     @Autowired
     DataSource ds;
-
+    
     @Test
+    @RunWith(SpringJUnit4ClassRunner.class)
+    @ContextConfiguration(locations = {"file:src/main/webapp/WEB-INF/spring/**/root-context.xml"})
+
     public void insertUserTest() throws Exception {
         User user = new User("asdf", "1234", "abc",  "aaa@aaa.com", new Date(), "fb", new Date());
         deleteAll();
@@ -105,6 +107,41 @@ public class DBConnectionTest2Test extends TestCase {
         PreparedStatement pstmt = conn.prepareStatement(sql);
 
         pstmt.executeUpdate();
+    }
+
+    @Test
+    public void transactionTest() throws Exception {
+        Connection conn = null;
+        try {
+            deleteAll();
+            conn = ds.getConnection();
+            conn.setAutoCommit(false);
+
+            String sql ="insert into user_info values (?, ?, ?, ?, ?, ?, now())";
+
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+
+            pstmt.setString(1, "asdf");
+            pstmt.setString(2, "1234");
+            pstmt.setString(3, "asdf");
+            pstmt.setString(4, "aaaa@aaa.com");
+            pstmt.setDate(5, new java.sql.Date(new Date().getTime()));
+            pstmt.setString(6, "fb");
+
+            // 첫번째 insert
+            int rowCnt = pstmt.executeUpdate();
+
+            // 두번째 insert
+            pstmt.setString(2, "asdf");
+            rowCnt = pstmt.executeUpdate();
+
+            conn.commit();
+        } catch (Exception e) {
+            conn.rollback();
+        } finally {
+
+        }
+
     }
 
     public int insertUser(User user) throws Exception {
