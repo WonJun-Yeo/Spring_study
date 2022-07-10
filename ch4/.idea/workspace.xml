@@ -19,10 +19,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="Jsp File" />
-        <option value="Interface" />
         <option value="JUnit4 Test Class" />
+        <option value="Interface" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -79,15 +79,15 @@
       <recent name="" />
     </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
-      <recent name="com.fastcampus.ch4.dao" />
       <recent name="com.fastcampus.ch4.service" />
+      <recent name="com.fastcampus.ch4.dao" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.fastcampus.ch4.dao" />
       <recent name="com.fastcampus.ch4.domain" />
+      <recent name="com.fastcampus.ch4.dao" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BoardDaoImplTest.select">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.62">
     <configuration name="BoardDaoImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ch4" />
       <extension name="coverage">
@@ -119,22 +119,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BoardDaoImplTest.select" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ch4" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.fastcampus.ch4.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.fastcampus.ch4.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.fastcampus.ch4.dao.BoardDaoImplTest" />
-      <option name="METHOD_NAME" value="select" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="PageHandlerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ch4" />
       <extension name="coverage">
@@ -146,6 +130,38 @@
       <option name="PACKAGE_NAME" value="com.fastcampus.ch4.domain" />
       <option name="MAIN_CLASS_NAME" value="com.fastcampus.ch4.domain.PageHandlerTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PageHandlerTest.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ch4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.fastcampus.ch4.domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.fastcampus.ch4.domain" />
+      <option name="MAIN_CLASS_NAME" value="com.fastcampus.ch4.domain.PageHandlerTest" />
+      <option name="METHOD_NAME" value="test2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PageHandlerTest.test3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ch4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.fastcampus.ch4.domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.fastcampus.ch4.domain" />
+      <option name="MAIN_CLASS_NAME" value="com.fastcampus.ch4.domain.PageHandlerTest" />
+      <option name="METHOD_NAME" value="test3" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -239,18 +255,20 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.PageHandlerTest.test2" />
+      <item itemvalue="JUnit.PageHandlerTest.test3" />
       <item itemvalue="JUnit.BoardDaoImplTest" />
       <item itemvalue="JUnit.BoardDaoImplTest.insertTestData" />
-      <item itemvalue="JUnit.BoardDaoImplTest.select" />
       <item itemvalue="JUnit.PageHandlerTest" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.62" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BoardDaoImplTest.select" />
-        <item itemvalue="JUnit.PageHandlerTest" />
         <item itemvalue="JUnit.BoardDaoImplTest.insertTestData" />
         <item itemvalue="JUnit.BoardDaoImplTest" />
+        <item itemvalue="JUnit.PageHandlerTest" />
+        <item itemvalue="JUnit.PageHandlerTest.test3" />
+        <item itemvalue="JUnit.PageHandlerTest.test2" />
       </list>
     </recent_temporary>
   </component>
@@ -269,7 +287,7 @@
       <workItem from="1657157650513" duration="24000" />
       <workItem from="1657262465730" duration="66000" />
       <workItem from="1657262556474" duration="5802000" />
-      <workItem from="1657427102607" duration="7492000" />
+      <workItem from="1657427102607" duration="11585000" />
     </task>
     <servers />
   </component>
