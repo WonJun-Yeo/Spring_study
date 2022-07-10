@@ -18,11 +18,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit4 Test Class" />
-        <option value="Interface" />
         <option value="CSS File" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Interface" />
+        <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -79,15 +79,15 @@
       <recent name="" />
     </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
-      <recent name="com.fastcampus.ch4.service" />
       <recent name="com.fastcampus.ch4.dao" />
+      <recent name="com.fastcampus.ch4.service" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.fastcampus.ch4.domain" />
       <recent name="com.fastcampus.ch4.dao" />
+      <recent name="com.fastcampus.ch4.domain" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.62">
+  <component name="RunManager" selected="JUnit.BoardDaoImplTest.select">
     <configuration name="BoardDaoImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ch4" />
       <extension name="coverage">
@@ -146,19 +146,6 @@
       <option name="PACKAGE_NAME" value="com.fastcampus.ch4.domain" />
       <option name="MAIN_CLASS_NAME" value="com.fastcampus.ch4.domain.PageHandlerTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="ch4" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="ch4" />
-      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -260,10 +247,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BoardDaoImplTest.select" />
         <item itemvalue="JUnit.PageHandlerTest" />
         <item itemvalue="JUnit.BoardDaoImplTest.insertTestData" />
         <item itemvalue="JUnit.BoardDaoImplTest" />
-        <item itemvalue="JUnit.BoardDaoImplTest.select" />
       </list>
     </recent_temporary>
   </component>
@@ -282,6 +269,7 @@
       <workItem from="1657157650513" duration="24000" />
       <workItem from="1657262465730" duration="66000" />
       <workItem from="1657262556474" duration="5802000" />
+      <workItem from="1657427102607" duration="7492000" />
     </task>
     <servers />
   </component>
