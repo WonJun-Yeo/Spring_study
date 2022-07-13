@@ -21,10 +21,14 @@
 </div>
 <script>
     let msg = "${msg}"
+
+    if (msg=="WRT_OK") alert("등록 성공");
+
     if (msg=="DEL_OK") alert("삭제 성공");
     if (msg=="DEL_ERR") alert("삭제 실패");
 </script>
 <div style="text-align:center">
+    <button type="button" id="writeBtn" onclick="location.href='<c:url value='/board/write' />'">글쓰기</button>
     <table border="1">
         <tr>
             <th>번호</th>
@@ -46,13 +50,13 @@
     <br>
     <div>
         <c:if test="${ph.showPrev}">
-            <a href="<c:url value="/board/list?page=${ph.beginPage-1}&pageSize=${ph.pageSize}" />">&lt;</a>
+            <a href="<c:url value='/board/list?page=${ph.beginPage-1}&pageSize=${ph.pageSize}' />">&lt;</a>
         </c:if>
         <c:forEach var="i" begin="${ph.beginPage}" end="${ph.endPage}">
-            <a href="<c:url value="/board/list?page=${i}&pageSize=${ph.pageSize}" />">${i}</a>
+            <a href="<c:url value='/board/list?page=${i}&pageSize=${ph.pageSize}' />">${i}</a>
         </c:forEach>
         <c:if test="${ph.showNext}">
-            <a href="<c:url value="/board/list?page=${ph.endPage+1}&pageSize=${ph.pageSize}" />">&gt;</a>
+            <a href="<c:url value='/board/list?page=${ph.endPage+1}&pageSize=${ph.pageSize}' />">&gt;</a>
         </c:if>
     </div>
 </div>

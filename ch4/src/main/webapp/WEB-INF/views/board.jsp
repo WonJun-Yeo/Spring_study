@@ -20,12 +20,17 @@
         <li><a href=""><i class="fas fa-search small"></i></a></li>
     </ul>
 </div>
+<script>
+    let msg = "${msg}"
+    if (msg=="WRT_ERR") alert("등록 실패");
+</script>
 <div style="text-align:center">
+    <h2>게시물 ${mode == "new" ? "글쓰기" : "읽기"}</h2>
     <form action="" id="form">
-        <input type="text" name="bno" value="${boardDto.bno}" readonly="readonly">
-        <input type="text" name="title" value="${boardDto.title}" readonly="readonly">
-        <textarea name="content" id="" cols="30" rows="10" readonly="readonly">value="${boardDto.content}"</textarea>
-        <button type="button" id="writeBtn" class="btn">등록</button>
+        <input type="hidden" name="bno" value="${boardDto.bno}">
+        <input type="text" name="title" value="${boardDto.title}" ${mode=='new' ? "" : "readonly='readonly'"}>
+        <textarea name="content" id="" cols="30" rows="10" ${mode=='new' ? "" : "readonly='readonly'"}>${boardDto.content}</textarea>
+        <button type="button" id="writeBtn" class="btn">글쓰기</button>
         <button type="button" id="modifyBtn" class="btn">수정</button>
         <button type="button" id="removeBtn" class="btn">삭제</button>
         <button type="button" id="listBtn" class="btn">목록</button>
@@ -37,6 +42,29 @@
        $('#listBtn').on("click", function(){
            location.href = "<c:url value="/board/list" />?page=${page}&pageSize=${pageSize}";
        })
+        $('#modifyBtn').on("click", function(){
+            let form = $('#form');
+            let isReadOnly = $("input[name=title]").attr('readonly');
+
+            if (isReadOnly=="readonly") {
+                $('input[name=title]').attr('readonly', false);
+                $("textarea").attr('readonly', false);
+                $("#modifyBtn").html("등록");
+                $("h2").html("게시물 수정");
+                return;
+            }
+            form.attr("action", "<c:url value='/board/modify' />");
+            form.attr("method", "post");
+            form.submit();
+        })
+
+
+        $('#writeBtn').on("click", function(){
+            let form = $('#form');
+            form.attr("action", "<c:url value='/board/write' />");
+            form.attr("method", "post");
+            form.submit();
+        })
         $('#removeBtn').on("click", function(){
             if (!confirm("정말로 삭제하시겠습니까?")) return;
             let form = $('#form');
