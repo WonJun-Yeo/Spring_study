@@ -21,8 +21,8 @@
         <option value="CSS File" />
         <option value="JUnit4 Test Class" />
         <option value="Interface" />
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -291,7 +291,7 @@
       <workItem from="1657523602744" duration="6310000" />
       <workItem from="1657672210180" duration="6649000" />
       <workItem from="1657682660520" duration="5818000" />
-      <workItem from="1657758509869" duration="4479000" />
+      <workItem from="1657758509869" duration="7610000" />
     </task>
     <servers />
   </component>
